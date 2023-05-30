@@ -1,0 +1,217 @@
+{
+	"apis": {
+				"Mattermark":{
+					"name": "Mattermark",
+					"host_url": "https://eapi.mattermark.com",
+					"key_list":[
+						""
+					]
+				},
+				"fmpcloud": {
+					"name": "fmpcloud",
+					"host_url": "https://fmpcloud.io/api/v3/",
+					"key_list":[
+					]
+				},
+				"github":{
+					"name": "github",
+					"host_url": "https://api.github.com",
+					"api_key":""
+				},
+				"product_hunt":{
+					"name": "product_hunt",
+					"host_url": "https://api.producthunt.com/v2/",
+					"api_key":"",
+					"api_secret":""
+				},
+				"snovio": {
+					"name": "snovio",
+					"host_url": "https://api.snov.io/",
+					"client_id":"",
+    				"client_secret": ""
+				},
+				"deepL": {
+					"name": "deepL",
+					"api_key": ""
+				},
+				"affinity": {
+					"name": "affinity",
+					"host_url": "https://api.affinity.co",
+					"api_key": "OlBpUVdpeFpsYXJobTM5RzJucjRuY2g0ZFBVaHNrczdyRm9QVGlrTjhPRVU="
+				}
+	},
+	"wandb":{
+			"WANDB_API_KEY":"",
+			"WANDB_MODE":"dryrun",
+		 	"config" : {
+			   "dataset": "CIFAR10",
+			   "machine": "offline cluster",
+			   "model": "CNN",
+			   "learning_rate": 0.01,
+			   "batch_size": 128
+			}
+	},
+	"mongo_db_local": {
+		"server": "mongodb://",
+		"username": "",
+		"password": "",
+		"host": "localhost",
+		"port": "27017",
+		"db_name": "startup_companies",
+		"ssl": true
+	},
+	"mongo_db": {
+		"server": "mongodb://",
+		"username": "gerniks",
+		"password": "",
+		"host": "",
+		"port": "27017",
+		"db_name": "admin",
+		"ssl": false
+	},
+	"mongo_db_server_locally": {
+		"server": "mongodb://",
+		"username": "",
+		"password": "",
+		"host": "",
+		"port": "27017",
+		"db_name": "admin",
+		"ssl": false
+	},
+		"mongo_db_gpu": {
+		"server": "mongodb://",
+		"username": "",
+		"password": "",
+		"host": "",
+		"port": "27017",
+		"db_name": "admin",
+		"ssl": false
+	},
+	"mongo_db_gpu2": {
+		"server": "mongodb://",
+		"username": "",
+		"password": "",
+		"host": "",
+		"port": "27017",
+		"db_name": "admin",
+		"ssl": false
+	},
+	"mongo_db_test": {
+		"server": "mongodb+srv://",
+		"username": "",
+		"password": "",
+		"host": "cluster0.fils5.mongodb.net",
+		"port": "",
+		"db_name": "startup_companies",
+		"ssl": true
+	},
+	"mongo_db_dev_local": {
+		"server": "mongodb://",
+		"username": "admin",
+		"password": "admin",
+		"host": "localhost",
+		"port": "27017",
+		"db_name": "admin",
+		"ssl": false
+	},
+	"s3_config": {
+		"AWSAccessKeyId":"",
+		"AWSSecretKey":""
+	},
+	"scrapfly_key":"fbc02e86ba0541d29537a115b2d13736",
+	"csv_resources_list": [
+		{	"source_name": "crunchbase",
+			"file_path_url" : "https://docs.google.com/spreadsheets/d/1MFFbAcksBPg5JS5eDZhtcmkt_VKbVwR0xP1wI-5VsNU/export?format=csv",
+			"source_type": "url"
+		},
+		{
+			"source_name": "dealroom",
+			"file_path_url" : "https://docs.google.com/spreadsheets/d/1MFFbAcksBPg5JS5eDZhtcmkt_VKbVwR0xP1wI-5VsNU/export?format=csv",
+			"source_type": "url"
+		},
+		{
+			"source_name": "dealroom",
+			"file_path_url": "https://docs.google.com/spreadsheets/d/1u8Rf2epXQJ-44nxv8b8OWqhMM11QEeF2-5rNn1Vp-n8/export?format=csv",
+			"source_type": "url"
+		},
+		{
+			"source_name": "european_tech_filtered",
+			"file_path_url": "https://docs.google.com/spreadsheets/d/1585MoSOBbL9C70X8-jeFVNqxUWYabilIEN38Qswgw_g/export?format=csv",
+			"source_type": "url"
+		},
+		{
+			"source_name": "startups_mixed",
+			"file_path_url": "https://docs.google.com/spreadsheets/d/1Ghfwv4_LZnQNi3MNxApGKQ_esvd_MGYLdyEMrYAU4w8/export?format=csv",
+			"source_type": "url"
+		},
+		{
+			"source_name": "b2b_saas_companies",
+			"file_path_url": "https://drive.google.com/file/d/1KmeKjXxtJIZse9L_HrqoCGJZ6guJGfib/export?format=csv",
+			"source_type": "url"
+		},
+		{
+			"source_name": "region_prediction",
+			"file_path_url": "https://docs.google.com/spreadsheets/d/1z0if9tXJnUI1eeU5ZEpHCms2G8RVzrHRbFlGYfdF_fE/export?format=csv",
+			"source_type": "url"
+		},
+		{
+			"source_name": "cryptomarkets",
+			"file_path_url": "crypto-markets.csv",
+			"source_type": "file"
+		},
+		{
+			"source_name": "corporates_startup",
+			"file_path_url": "https://docs.google.com/spreadsheets/d/1wvUIltYGVNaVAwpx61C8DhcgCWQAxOLEejZGJeMYlSY/export?format=csv",
+			"source_type": "url"
+		},
+		{
+			"source_name": "airtable",
+			"file_path_url": "https://docs.google.com/spreadsheets/d/1ImUG0tuNtMEZ7RNX1dWmLGbLym6xV8bc-Xv5hveaCnk/export?format=csv",
+			"source_type": "file"
+		}
+	],
+	"scraping_sources": {
+
+		"crunchbase": {
+			"container_selector": {"domain":"profile-section > section-card > mat-card > div.section-content-wrapper > div > fields-card > ul"},
+			"login_url": "https://www.crunchbase.com/login",
+			"username": "",
+			"password": "",
+			"username_selector": "#mat-input-7",
+			"password_selector": "#mat-input-8",
+			"login_btn_selector": "#mat-tab-content-1-0 > div > login > form > button"
+		},
+
+		"eu_startups": {
+			"directory_url": "https://www.eu-startups.com/directory/?dosrch=1&q=&wpbdp_view=search&listingfields%5B1%5D=&listingfields%5B2%5D=-1&listingfields%5B7%5D=&listingfields%5B6%5D=&listingfields%5B4%5D=2022",
+			"company_list_selector": "#wpbdp-listings-list",
+			"company_name": "Business Name",
+			"full_web_address": "Website",
+			"year_founded": "Founded",
+			"country": "Category",
+			"city": "Based in",
+			"company_info_container": ".listing-details",
+			"login_url": "https://www.eu-startups.com/login/",
+			"username": "",
+			"password": "",
+			"username_selector": "#user_login",
+			"password_selector": "#user_pass",
+			"login_btn_selector": "#wp-submit"
+		},
+		"ycombinator": {
+			"directory_url": "https://www.ycombinator.com/companies/?industry=Consumer",
+			"company_list_xpath": "/html/body/div/div[2]/section[2]/div/div[2]/div[4]/a",
+			"company_name_xpath": "/html/body/div/div[2]/section/div/div[1]/div[1]/div[2]/div[1]/h1",
+			"full_web_address_xpath": "/html/body/div/div[2]/section/div/div[1]/div[2]/div/div/a",
+			"year_founded_xpath": "/html/body/div/div[2]/section/div/div[2]/div/div[2]/div[1]/span[2]",
+			"location_xpath": "/html/body/div/div[2]/section/div/div[2]/div/div[2]/div[3]/span[2]",
+			"team_size_xpath": "/html/body/div/div[2]/section/div/div[2]/div/div[2]/div[2]/span[2]"
+		},
+		"web_summit": {
+			"url": "https://websummit.com/startups/featured-startups?q=eyJwYWdlIjoxLCJjb25maWd1cmUiOnsiaGl0c1BlclBhZ2UiOjQ4LCJ0YWdGaWx0ZXJzIjpbIndzMjEiXX19",
+			"company_card_xpath": "/html/body/div[1]/div[1]/div[2]/div[3]/div[2]/div/div[1]/a",
+			"company_list_selector": ".sliderTray___-vHFQ",
+			"next_page_button_xpath": "/html/body/div[1]/div[1]/div[2]/div[3]/div[2]/nav/ul/li[9]/button"
+		}
+	}
+}

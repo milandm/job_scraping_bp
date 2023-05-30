@@ -1,0 +1,3 @@
+
+class ConfigReadException(Exception):
+    pass

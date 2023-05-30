@@ -1,0 +1,188 @@
+class MongoDbConstants:
+    DATE_FORMAT = '%d%m%Y'
+    MONGO_INDEX_TABLE_POSTFIX = "_INDEX"
+    BASE_WEB_ADDRESS = "base_web_address"
+    INTERNAL_COLLECTION_NAME = "internal_collection_name"
+
+
+class SourcesConstants:
+    LINKEDIN_SALES_NAVIGATOR = 'linkedin_sales_navigator'
+    AFFINITY = 'affinity'
+    GITHUB = 'github'
+
+
+class SourceDirectoryConstants:
+    """Mappings for source -> sources_data_directory"""
+    # done this way because directory name could differ from source constant
+    sources_dir_dict = {
+        SourcesConstants.LINKEDIN_SALES_NAVIGATOR: SourcesConstants.LINKEDIN_SALES_NAVIGATOR
+    }
+
+
+class RunAppConstants:
+    CONFIG_JSON_PATH = './config/data_config.json'
+    BASE_COLLECTION_NAME = "COMPANY_INTERNAL_PROFILE_integrated"
+    BASE_CSV_FILES_DIR = "dataset/csv/"
+    DEFAULT_DATA_SOURCE = SourcesConstants.LINKEDIN_SALES_NAVIGATOR
+    DELIMITER = ','
+    DB_CONFIG = 'mongo_db_dev_local'
+    SCRAPING_BUCKET_NAME = 'scraping-test-bucket'
+    EXPORT_BUCKET_NAME = 'test-export-bucket-a'
+
+
+class ExportConstants:
+    PREDICTIONS_EXPORT_FILENAME_DATETIME_FORMAT = '%Y%m%d%H%M%S'
+
+
+class CriterionLabelConstants:
+    # B2B_B2C
+    B2B_B2C_CRITERION = "B2B_B2C"
+    B2C_LABEL = "B2C"
+    B2B_LABEL = "B2B"
+    B2C_LABEL_NUMBER = 0
+    B2B_LABEL_NUMBER = 1
+    B2B_B2C_TAGS = [B2B_LABEL_NUMBER, B2C_LABEL_NUMBER]
+    B2B_B2C_LABELS = [B2C_LABEL, B2B_LABEL]
+    B2B_B2C_CRITERION_LABEL_NUMBER = {B2C_LABEL: B2C_LABEL_NUMBER,
+                                      B2B_LABEL: B2B_LABEL_NUMBER}
+    B2C_EXPORT_LABEL = "B2C"
+    B2B_EXPORT_LABEL = "B2B"
+    B2B_B2C_EXPORT_LABELS = {B2C_LABEL: B2C_EXPORT_LABEL,
+                             B2B_LABEL: B2B_EXPORT_LABEL}
+
+    # SOFTWARE_NOT_SOFTWARE
+    SOFTWARE_NOT_SOFTWARE_CRITERION = "SOFTWARE_NON_SOFTWARE"
+    NOT_SOFTWARE_LABEL = "NOT_SOFTWARE"
+    SOFTWARE_LABEL = "SOFTWARE"
+    NOT_SOFTWARE_LABEL_NUMBER = 0
+    SOFTWARE_LABEL_NUMBER = 1
+    INDUSTRY_TAGS = [SOFTWARE_LABEL_NUMBER, NOT_SOFTWARE_LABEL_NUMBER]
+    SOFTWARE_NOT_SOFTWARE_LABELS = [NOT_SOFTWARE_LABEL, SOFTWARE_LABEL]
+    SOFTWARE_NOT_SOFTWARE_CRITERION_LABEL_NUMBER = {NOT_SOFTWARE_LABEL: NOT_SOFTWARE_LABEL_NUMBER,
+                                                    SOFTWARE_LABEL: SOFTWARE_LABEL_NUMBER}
+
+    SOFTWARE_EXPORT_LABEL = "Software"
+    NOT_SOFTWARE_EXPORT_LABEL = "Not Software"
+    SOFTWARE_NOT_SOFTWARE_EXPORT_LABELS = {SOFTWARE_LABEL: SOFTWARE_EXPORT_LABEL,
+                                           NOT_SOFTWARE_LABEL: NOT_SOFTWARE_EXPORT_LABEL}
+
+    STARTUP_CORPORATE_CRITERION = "STARTUP_CORPORATE"
+    STARTUP_LABEL = "STARTUP"
+    CORPORATE_LABEL = "CORPORATE"
+    STARTUP_LABEL_NUMBER = 0
+    CORPORATE_LABEL_NUMBER = 1
+    STARTUP_CORPORATE_TAGS = [STARTUP_LABEL_NUMBER, CORPORATE_LABEL_NUMBER]
+    STARTUP_CORPORATE_LABELS = [STARTUP_LABEL, CORPORATE_LABEL]
+    STARTUP_CORPORATE_CRITERION_LABEL_NUMBER = {STARTUP_LABEL: STARTUP_LABEL_NUMBER,
+                                                CORPORATE_LABEL: CORPORATE_LABEL_NUMBER}
+
+    STARTUP_EXPORT_LABEL = "Startup"
+    CORPORATE_EXPORT_LABEL = "Corporation"
+    STARTUP_CORPORATE_EXPORT_LABELS = {STARTUP_LABEL: STARTUP_EXPORT_LABEL,
+                                       CORPORATE_LABEL: CORPORATE_EXPORT_LABEL}
+
+    # NOAGENCY_CRITERION
+    NOAGENCY_CRITERION = "NOAGENCY_CRITERION"
+    NOAGENCY_LABEL = "NOAGENCY"
+    NON_NOAGENCY_LABEL = "NON_NOAGENCY_LABEL"
+    NOAGENCY_LABEL_NUMBER = 0
+    NON_NOAGENCY_LABEL_NUMBER = 1
+    NOAGENCY_TAGS = [NOAGENCY_LABEL_NUMBER, NON_NOAGENCY_LABEL_NUMBER]
+    NOAGENCY_LABELS = [NOAGENCY_LABEL, NON_NOAGENCY_LABEL]
+    NOAGENCY_CRITERION_LABEL_NUMBER = {NOAGENCY_LABEL: NOAGENCY_LABEL_NUMBER,
+                                          NON_NOAGENCY_LABEL: NON_NOAGENCY_LABEL_NUMBER}
+
+    NOAGENCY_EXPORT_LABEL = "Not Agency"
+    NON_NOAGENCY_EXPORT_LABEL = "Agency"
+    NOAGENCY_EXPORT_LABELS = {NOAGENCY_LABEL: NOAGENCY_EXPORT_LABEL,
+                              NON_NOAGENCY_LABEL: NON_NOAGENCY_EXPORT_LABEL}
+
+    CRITERION_LABEL = {
+        B2B_B2C_CRITERION: B2B_B2C_LABELS,
+        SOFTWARE_NOT_SOFTWARE_CRITERION: SOFTWARE_NOT_SOFTWARE_LABELS,
+        STARTUP_CORPORATE_CRITERION: STARTUP_CORPORATE_LABELS,
+        NOAGENCY_CRITERION: NOAGENCY_LABELS
+    }
+
+    CRITERION_LABEL_NUMBER = {
+        B2B_B2C_CRITERION: B2B_B2C_CRITERION_LABEL_NUMBER,
+        SOFTWARE_NOT_SOFTWARE_CRITERION: SOFTWARE_NOT_SOFTWARE_CRITERION_LABEL_NUMBER,
+        STARTUP_CORPORATE_CRITERION: STARTUP_CORPORATE_CRITERION_LABEL_NUMBER,
+        NOAGENCY_CRITERION: NOAGENCY_CRITERION_LABEL_NUMBER
+    }
+
+    CRITERION_EXPORT_LABEL = {
+        B2B_B2C_CRITERION: B2B_B2C_EXPORT_LABELS,
+        SOFTWARE_NOT_SOFTWARE_CRITERION: SOFTWARE_NOT_SOFTWARE_EXPORT_LABELS,
+        STARTUP_CORPORATE_CRITERION: STARTUP_CORPORATE_EXPORT_LABELS,
+        NOAGENCY_CRITERION: NOAGENCY_EXPORT_LABELS
+    }
+
+
+class CsvExportProfilePreviewConstants:
+    CORRECT_LABEL = "Correct Label"
+    COMPANY_NAME = 'Company Name'
+    WEB_ADDRESS = 'Web Address'
+    AFFINITY_PRESENCE = 'Affinity presence'
+    B2B_B2C_CSV_EXPORT_LABEL = 'B2B VS B2C'
+    SOFTWARE_NOT_SOFTWARE_CSV_EXPORT_LABEL = 'Software VS Non Software'
+    STARTUP_CORPORATE_CSV_EXPORT_LABEL = 'Startup VS Corporation'
+    NOAGENCY_CSV_EXPORT_LABEL = 'Agencies/ Developers'
+    LOCATION = 'Location'
+    COUNTRY = 'Country'
+    CITY = 'City'
+    SOURCES = 'Sources'
+    DUPLICATE = 'Duplicate'
+    INTERNAL_ITEMS_COUNT = 'Internal Items count'
+    SCRAPING_ERRORS = 'Scraping Errors'
+    LANGUAGE = 'Language'
+    IS_SCRAPED = 'Is Scraped'
+
+    CRITERION_LABEL_CSV_EXPORT = {
+        CriterionLabelConstants.B2B_B2C_CRITERION: B2B_B2C_CSV_EXPORT_LABEL,
+        CriterionLabelConstants.SOFTWARE_NOT_SOFTWARE_CRITERION: SOFTWARE_NOT_SOFTWARE_CSV_EXPORT_LABEL,
+        CriterionLabelConstants.STARTUP_CORPORATE_CRITERION: STARTUP_CORPORATE_CSV_EXPORT_LABEL,
+        CriterionLabelConstants.NOAGENCY_CRITERION: NOAGENCY_CSV_EXPORT_LABEL
+    }
+
+    CSV_EXPORT_HEADER = [COMPANY_NAME,
+                         WEB_ADDRESS,
+                         LOCATION,
+                         B2B_B2C_CSV_EXPORT_LABEL,
+                         SOFTWARE_NOT_SOFTWARE_CSV_EXPORT_LABEL,
+                         STARTUP_CORPORATE_CSV_EXPORT_LABEL,
+                         NOAGENCY_CSV_EXPORT_LABEL,
+                         AFFINITY_PRESENCE,
+                         DUPLICATE,
+                         ]
+
+    CSV_EXPORT_REPORT_HEADER = [COMPANY_NAME,
+                                WEB_ADDRESS,
+                                SOURCES,
+                                INTERNAL_ITEMS_COUNT,
+                                DUPLICATE,
+                                LANGUAGE,
+                                IS_SCRAPED,
+                                SCRAPING_ERRORS
+                                ]
+
+    # just for mattermark labeling export
+    INDUSTRIES = 'Industries'
+    MATTERMARK_CSV_EXPORT_HEADER = [COMPANY_NAME, WEB_ADDRESS, INDUSTRIES]
+    # just for corporates_startup labelling export
+    CORPORATES_STARTUP_CSV_EXPORT_HEADER = [COMPANY_NAME, WEB_ADDRESS, STARTUP_CORPORATE_CSV_EXPORT_LABEL]
+
+
+class AffinityPresence:
+    PRESENT = 'Present'
+    NOT_PRESENT = 'Not Present'
+
+
+class ScrapedStatusConstants:
+    SCRAPED = 'Scraped'
+    NOT_SCRAPED = 'Not Scraped'
+
+
+class DuplicateConstants:
+    YES = 'Yes'
+    NO = 'No'
